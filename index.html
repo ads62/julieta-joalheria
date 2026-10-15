@@ -1,0 +1,163 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Julieta | Joalheria e acessórios em Tramandaí</title>
+<meta name="description" content="Julieta, joalheria em Tramandaí-RS. Peças em folheado e prata, atendimento individualizado e novidades toda semana.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6efea;--bg2:#ece0d8;--ink:#2b1d1d;--mute:#6f5a58;--rose:#935f5e;--gold:#b08d4e;--line:rgba(43,29,29,.14);--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1f1514;--bg2:#2a1c1b;--ink:#f3e8e1;--mute:#b9a39e;--line:rgba(243,232,225,.16)}}
+:root[data-theme="dark"]{--bg:#1f1514;--bg2:#2a1c1b;--ink:#f3e8e1;--mute:#b9a39e;--line:rgba(243,232,225,.16)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:300 17px/1.65 var(--sans);overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.02;margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--rose)}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:calc(18px + env(safe-area-inset-top,0px)) 28px 18px;transition:background .4s,backdrop-filter .4s}
+nav.s{background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px)}
+nav .logo{font-family:var(--serif);font-size:30px;font-style:italic;color:#fff;transition:color .4s}
+nav.s .logo{color:var(--rose)}
+nav .links{display:flex;gap:30px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#fff}
+nav.s .links{color:var(--ink)}
+.btn{display:inline-block;padding:15px 30px;border:1px solid currentColor;font-size:12px;letter-spacing:.2em;text-transform:uppercase;transition:background .3s,color .3s,transform .3s}
+.btn.fill{background:var(--rose);border-color:var(--rose);color:#fff}
+.btn:hover,.btn:focus-visible{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#3a2524}
+.hero .bg{position:absolute;inset:-8% 0;background:url(assets/fachada2.jpg) center 35%/cover;will-change:transform}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(32,18,18,.35),rgba(32,18,18,.2) 40%,rgba(32,18,18,.78))}
+.hero .wrap{position:relative;z-index:2;padding-bottom:9vh;width:100%}
+.hero h1{font-size:clamp(46px,8.4vw,118px);max-width:12ch;font-weight:300}
+.hero h1 em{color:#e9cfc4}
+.hero p{max-width:46ch;margin:26px 0 34px;font-size:18px;color:#f3e8e1}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero .btn.ghost{color:#fff}
+.rating{position:absolute;right:28px;bottom:9vh;z-index:2;text-align:right;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.rating b{display:block;font:300 64px/1 var(--serif);letter-spacing:0}
+/* sobre */
+section{padding:clamp(80px,12vw,160px) 0}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,7vw,110px);align-items:center}
+.about .ph{position:relative}
+.about .ph img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.about .ph .small{position:absolute;width:46%;right:-8%;bottom:-9%;border:10px solid var(--bg);aspect-ratio:4/5;object-fit:cover}
+.about h2{font-size:clamp(38px,5vw,68px);margin:18px 0 26px}
+.about p{color:var(--mute);max-width:48ch}
+/* marquee-like pillars */
+.pillars{background:var(--rose);color:#f8ece6;padding:0}
+.pillars ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr)}
+.pillars li{padding:54px 32px;border-left:1px solid rgba(255,255,255,.22)}
+.pillars li:first-child{border-left:0}
+.pillars h3{font-size:34px;font-style:italic;margin-bottom:10px}
+.pillars p{margin:0;font-size:15px;opacity:.9;max-width:30ch}
+/* vitrine */
+.vit{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(30px,5vw,80px);align-items:end}
+.vit .big{position:relative;overflow:hidden}
+.vit .big img{width:100%;height:min(78vh,720px);object-fit:cover;transform:scale(1.12);will-change:transform}
+.vit h2{font-size:clamp(36px,4.6vw,62px);margin:16px 0 22px}
+.vit p{color:var(--mute)}
+.vit .btn{margin-top:22px}
+/* avaliações */
+.rev{background:var(--bg2)}
+.rev header{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:56px;flex-wrap:wrap}
+.rev h2{font-size:clamp(36px,4.6vw,62px);margin-top:14px}
+.rev .score{font-family:var(--serif);font-size:20px;color:var(--mute)}
+.rev .score b{font-size:56px;font-weight:300;color:var(--ink);margin-right:10px}
+.quotes{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:0;border-top:1px solid var(--line)}
+.quotes blockquote{margin:0;padding:36px 30px 10px 0;font-family:var(--serif);font-size:clamp(22px,2.2vw,30px);line-height:1.25;font-style:italic}
+.quotes blockquote+blockquote{padding-left:30px;border-left:1px solid var(--line)}
+.quotes small{display:block;margin-top:16px;font:400 11px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--mute);font-style:normal}
+.cust{margin-top:40px;color:var(--mute);max-width:70ch;font-size:15px}
+/* visite */
+.visit{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,6vw,90px);align-items:center}
+.visit img{width:100%;aspect-ratio:5/6;object-fit:cover}
+.visit h2{font-size:clamp(40px,5.4vw,76px);margin:16px 0 26px}
+dl{margin:0 0 30px;border-top:1px solid var(--line)}
+dl div{display:grid;grid-template-columns:120px 1fr;padding:16px 0;border-bottom:1px solid var(--line)}
+dt{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);padding-top:4px}dd{margin:0}
+footer{background:var(--ink);color:#d9c9c2;padding:70px 0 34px;text-align:center}
+footer .logo{display:block;margin:0 auto 14px;width:120px;border-radius:2px}
+footer p{margin:6px 0;font-size:14px}
+footer .ads{margin-top:44px;font-size:11px;letter-spacing:.12em;opacity:.5}
+.wa{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:30;background:var(--rose);color:#fff;padding:14px 22px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.rv{opacity:0;transform:translateY(34px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+/* cursor */
+.cur{position:fixed;left:0;top:0;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:var(--gold);pointer-events:none;z-index:99;display:none;transition:width .3s,height .3s,margin .3s,background .3s;font:500 10px/1 var(--sans);letter-spacing:.16em;color:#fff;align-items:center;justify-content:center}
+.cur.h{width:56px;height:56px;margin:-28px 0 0 -28px;background:rgba(147,95,94,.85)}
+@media(hover:hover) and (pointer:fine){.cur{display:flex}}
+@media(max-width:820px){
+ nav .links a:not(.cta-n){display:none}nav .links{gap:0}
+ .about,.vit,.visit{grid-template-columns:1fr}
+ .about .ph .small{right:4%}
+ .pillars ul{grid-template-columns:1fr}.pillars li{border-left:0;border-top:1px solid rgba(255,255,255,.22);padding:34px 28px}
+ .quotes{grid-template-columns:1fr}.quotes blockquote+blockquote{border-left:0;padding-left:0;border-top:1px solid var(--line);margin-top:26px}
+ .rating{position:static;text-align:left;margin-top:28px}
+ .hero .wrap{padding-bottom:7vh}.vit .big img{height:60vh}
+}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.cur{display:none!important}}
+</style></head><body>
+<div class="cur" aria-hidden="true"></div>
+<nav id="nav"><a class="logo" href="#top" aria-label="Julieta">Julieta</a>
+<div class="links"><a href="#sobre">A loja</a><a href="#avaliacoes">Avaliações</a><a class="cta-n" href="#visite">Visite</a></div></nav>
+<header class="hero" id="top"><div class="bg" id="hbg" role="img" aria-label="Fachada da joalheria Julieta em Tramandaí"></div>
+<div class="wrap"><span class="eyebrow" style="color:#e9cfc4">Joalheria · Tramandaí, RS</span>
+<h1>Peças para <em>guardar</em> e para presentear.</h1>
+<p>Folheado e prata com atendimento individualizado, novidades frequentes e um café enquanto você escolhe.</p>
+<div class="cta"><a class="btn fill" href="https://wa.me/5551996281527" target="_blank" rel="noopener">Falar no WhatsApp</a><a class="btn ghost" href="#visite">Como chegar</a></div></div>
+<div class="rating"><b>5,0</b>no Google · 40 avaliações</div></header>
+
+<section id="sobre"><div class="wrap about">
+<div class="ph rv"><img src="assets/retrato.jpg" alt="Retrato com colares e anel dourados" loading="lazy"><img class="small" src="assets/fachada1.jpg" alt="Entrada da loja Julieta" loading="lazy"></div>
+<div class="rv"><span class="eyebrow">A loja</span><h2>Um lugar para escolher com calma.</h2>
+<p>A Julieta nasceu para quem gosta de acessórios bem acabados e de ser atendida de verdade. Aqui cada cliente é recebida de forma individual, e as peças são pensadas para acompanhar o seu dia a dia e as ocasiões especiais.</p>
+<p>Compre na loja, retire na porta ou receba em casa, do jeito que ficar melhor para você.</p></div></div></section>
+
+<div class="pillars"><ul>
+<li class="rv"><h3>Na loja</h3><p>Venha experimentar as peças com atendimento exclusivo.</p></li>
+<li class="rv"><h3>Retirada na porta</h3><p>Escolheu pelo WhatsApp? Retire sem descer do carro.</p></li>
+<li class="rv"><h3>Entrega</h3><p>Receba suas peças com praticidade, onde estiver.</p></li></ul></div>
+
+<section><div class="wrap vit">
+<div class="big rv"><img id="vimg" src="assets/interior.jpg" alt="Interior da loja com vitrines douradas e plantas" loading="lazy"></div>
+<div class="rv"><span class="eyebrow">A vitrine</span><h2>Folheado e prata, sem abrir mão da qualidade.</h2>
+<p>Colares, brincos, anéis e pulseiras expostos como joia. Quem tem sensibilidade a bijuterias encontra aqui peças em folheado e prata que funcionam bem para a pele.</p>
+<a class="btn" href="https://wa.me/5551996281527?text=Oi!%20Quero%20conhecer%20as%20novidades%20da%20Julieta" target="_blank" rel="noopener">Ver novidades</a></div></div></section>
+
+<section class="rev" id="avaliacoes"><div class="wrap">
+<header class="rv"><div><span class="eyebrow">Quem já comprou</span><h2>Nota máxima no Google.</h2></div><div class="score"><b>5,0</b>40 avaliações</div></header>
+<div class="quotes rv">
+<blockquote>“Loja linda, os acessórios são de qualidade e o atendimento é ótimo.”<small>Avaliação no Google</small></blockquote>
+<blockquote>“Novidades diárias, promoções frequentes, atendimento nota 10.”<small>Avaliação no Google</small></blockquote>
+<blockquote>“Um serviço diferenciado aqui no Litoral Norte.”<small>Avaliação no Google</small></blockquote></div>
+<p class="cust rv">Clientes também destacam o atendimento individualizado, o café e o chocolatinho na loja.</p></div></section>
+
+<section id="visite"><div class="wrap visit">
+<img class="rv" src="assets/fachada2.jpg" alt="Fachada da Julieta com letreiro dourado" loading="lazy">
+<div class="rv"><span class="eyebrow">Visite</span><h2>Venha tomar um café com a gente.</h2>
+<dl><div><dt>Endereço</dt><dd>R. Pernambuco, 734 – sala 02<br>São José, Tramandaí – RS, 95590-000</dd></div>
+<div><dt>WhatsApp</dt><dd><a href="https://wa.me/5551996281527" target="_blank" rel="noopener">(51) 99628-1527</a></dd></div>
+<div><dt>Atendimento</dt><dd>Na loja, retirada na porta e entrega</dd></div></dl>
+<a class="btn fill" href="https://www.google.com/maps/search/?api=1&query=R.+Pernambuco+734+Tramandaí+RS" target="_blank" rel="noopener">Abrir no mapa</a></div></div></section>
+
+<footer><img class="logo" src="assets/logo.jpg" alt="Julieta"><p>R. Pernambuco, 734 – sala 02 · São José · Tramandaí – RS</p><p>© 2026 Julieta. Todos os direitos reservados.</p>
+<p class="ads">Desenvolvido por ADS — Agência Digital &amp; Sites</p></footer>
+<a class="wa" href="https://wa.me/5551996281527" target="_blank" rel="noopener">WhatsApp</a>
+<script>
+(function(){
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches,fine=matchMedia('(hover:hover) and (pointer:fine)').matches,wide=innerWidth>820;
+var nav=document.getElementById('nav'),hbg=document.getElementById('hbg'),vimg=document.getElementById('vimg'),t=false;
+function tick(){t=false;var y=scrollY;nav.classList.toggle('s',y>60);
+ if(!rm&&wide){if(y<innerHeight*1.2)hbg.style.transform='translate3d(0,'+(y*.22)+'px,0)';
+ var r=vimg.parentNode.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight){var p=(r.top+r.height/2-innerHeight/2)/innerHeight;vimg.style.transform='scale(1.12) translate3d(0,'+(p*-38)+'px,0)'}}}
+addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(tick)}},{passive:true});tick();
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.15});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+if(fine&&!rm){var c=document.querySelector('.cur'),mx=0,my=0,cx=0,cy=0;
+ addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY},{passive:true});
+ (function loop(){cx+=(mx-cx)*.18;cy+=(my-cy)*.18;c.style.transform='translate3d('+cx+'px,'+cy+'px,0)';requestAnimationFrame(loop)})();
+ document.querySelectorAll('a,button').forEach(function(a){a.addEventListener('mouseenter',function(){c.classList.add('h')});a.addEventListener('mouseleave',function(){c.classList.remove('h')})});
+ document.querySelectorAll('.vit .big,.about .ph').forEach(function(a){a.addEventListener('mouseenter',function(){c.classList.add('h');c.textContent='VER'});a.addEventListener('mouseleave',function(){c.classList.remove('h');c.textContent=''})})}
+})();
+</script></body></html>
